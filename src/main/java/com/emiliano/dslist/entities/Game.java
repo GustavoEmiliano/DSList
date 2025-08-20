@@ -9,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "tb_game")
 public class Game {
@@ -18,11 +17,11 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
-	
+
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
-	private String plataforms;
+	private String plataform;
 	private Double score;
 	private String imgUrl;
 	private String shortDescription;
@@ -32,13 +31,13 @@ public class Game {
 
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String plataforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String plataform, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataforms = plataforms;
+		this.plataform = plataform;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -77,12 +76,12 @@ public class Game {
 		this.genre = genre;
 	}
 
-	public String getPlataforms() {
-		return plataforms;
+	public String getPlataform() {
+		return plataform;
 	}
 
-	public void setPlataforms(String plataforms) {
-		this.plataforms = plataforms;
+	public void setPlataform(String plataform) {
+		this.plataform = plataform;
 	}
 
 	public Double getScore() {
